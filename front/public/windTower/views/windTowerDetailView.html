@@ -1,0 +1,158 @@
+<!--  添加/修改 模态框 开始-->
+<input id="id_view" type="hidden">
+<div class="modal fade" id="viewModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true"
+     data-backdrop='static' data-keyboard=false>
+    <div class="modal-dialog broadcastModalDialog" style="height: 510px;width:800px;">
+        <div class="modal-content broadcastModalContent" style="height:100%;width:100%">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">
+                    &times;
+                </button>
+                <h4 id="myModalLabel_view">
+                    测风塔详情
+                </h4>
+            </div>
+            <div class="modal-body broadcastModalBody clearfix">
+                <div class="col-sm-12">
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            测风塔编号
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="code_view" type="text" class="text-label" readonly="readonly">
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            测风塔名称
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="towerName_view" type="text" class="text-label" readonly="readonly">
+                    </div>
+
+                </div>
+                <div class="col-sm-12" style="margin-top: 5px">
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            省市
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="countryCity_view" type="text" class="text-label" readonly="readonly">
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            所属项目
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="project_view" type="text" class="text-label" readonly="readonly">
+                    </div>
+                </div>
+                <div class="col-sm-12" style="margin-top: 5px">
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            所属公司
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="company_view" type="text" class="text-label" readonly="readonly">
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            测风塔厂家
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="manufactor_view" type="text" class="text-label" readonly="readonly">
+                    </div>
+                </div>
+                <div class="col-sm-12" style="margin-top: 5px">
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            项目经理
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="manager_view" type="text" class="text-label" readonly="readonly">
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            立塔时间
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="towerCreateDate_view" type="text" class="text-label" readonly="readonly">
+                    </div>
+                </div>
+                <div class="col-sm-12" style="margin-top: 5px">
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            经度
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="longitude_view" type="text" value="" class="text-label" readonly="readonly">
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            纬度
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="latitude_view" type="text" value="" class="text-label" readonly="readonly">
+                    </div>
+                </div>
+                <div class="col-sm-12" style="margin-top: 5px">
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            测风塔高度
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="towerHeight_view" type="text" value="" class="text-label" readonly="readonly">
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            海拔
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="altitude_view" type="text" value="" class="text-label" readonly="readonly">
+                    </div>
+                </div>
+                <div class="col-sm-12" style="margin-top: 5px">
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            备注
+                        </label>
+                    </div>
+                    <div class="col-sm-10">
+                        <textarea id="memo_view" class="text-label" rows="5" style="resize:none;"
+                                  readonly="readonly"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-1">
+                    <button id="btnDataManage" class="btn btn-default"
+                            onclick="return toDataManage();" style="width: 80px;">
+                        数据管理
+                    </button>
+                </div>
+                <div class="col-sm-11">
+                    <button id="btnCancel_view" type="button" class="btn btn-default"
+                            data-dismiss="modal" style="width: 80px;">
+                        关闭
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+<script src="js/windTowerDetailView.js"></script>

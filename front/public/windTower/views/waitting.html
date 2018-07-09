@@ -1,0 +1,15 @@
+<div id="waitModel" class="modal fade" data-keyboard="false"
+     data-backdrop="static" data-role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="waittingText" class="loading"></div>
+</div>
+<script>
+    function showWaitting(msg) {
+        $("#waittingText").text(msg + "。。。")
+        $("#waitModel").modal("show");
+    }
+    function closeWaitting() {
+        $("#waittingText").text("。。。")
+        $("#waitModel").modal("hide");
+    }
+</script>

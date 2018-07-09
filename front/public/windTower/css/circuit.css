@@ -1,0 +1,20 @@
+.nodebox {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+.nodeTitle {
+    font: 13px sans-serif;
+}
+.nodeText {
+    font: 12px sans-serif;
+}
+.f1Text {
+    fill: orange;
+    font-weight: bold;
+}
+.link {
+    fill: none;
+    stroke: #00FFFF;
+    stroke-width: 3.5px;
+}

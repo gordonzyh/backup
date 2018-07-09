@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="">
+<%- include('include/html-head.html') %>
+<!-- 头部 -->
+<%- include('include/header.html') %>
+<!--侧边栏-->
+<%- include('include/aside.html') %>
+
+<body class="">
+<input id="backendUrl" value="<%=backendUrl%>" type="hidden"/>
+<article id="article" class="article-md clearfix articleFather">
+    <input id="dateList" type="hidden" value=""/>
+    <input id="currentTowerId" type="hidden" value=""/>
+    <input id="currentTowerName" type="hidden" value=""/>
+    <div id="leftArea" class="col-sm-3" style="height: 100%">
+        <div id="menuDiv" class="menuDiv"></div>
+    </div>
+    <div class="col-sm-9">
+
+        <div id="windTowerTableDev" class="modal-body broadcastModalBody2 tableDiv"
+             style="float: left;width: 100%; display: inline-block;">
+            <button id="batch" class="btn btn-sm btnCss3 btn-default"
+                    style="margin-left: 10px;margin-bottom: 10px;position:relative;">批量处理
+            </button>
+            <table id="windTowerTable"
+                   class="table table-bordered table-striped table-condensed"></table>
+        </div>
+        <br>
+
+        <div id="fixAreaTableDev" class="modal-body broadcastModalBody2 tableDiv"
+             style="float: left;width: 100%; display: inline-block;">
+            <span id="fixAreaTableTitle" class="label"
+                  style="margin-left: 10px; font-size: 20px;">处理履历</span>
+            <table id="fixAreaTable"
+                   class="table table-bordered table-striped table-condensed "></table>
+        </div>
+
+    </div>
+
+    <div id="divEvent" style="width: 20px;display: inline-block;position:relative;z-index: 1;">
+        <select id="selectEvent" class="selectpicker form-control" data-live-search="true"
+                title="">
+        </select>
+    </div>
+</article>
+<%- include('warnView.html') %>
+<%- include('warnManageProcess.html') %>
+<script src="js/warnManageList.js"></script>
+</body>
+<%- include('include/footer.html') %>
+</html>

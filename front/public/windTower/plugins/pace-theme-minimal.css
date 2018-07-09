@@ -1,0 +1,25 @@
+/* This is a compiled file, you should be editing the file in the templates directory */
+.pace .pace-progress {
+  background: rgba(255, 255, 255, 0.8);
+
+  /*background: -webkit-linear-gradient(90deg, #57405a, #bfa67e,#627e96); !* Safari 5.1 - 6.0 *!*/
+  /*background: -o-linear-gradient(90deg, #57405a, #bfa67e,#627e96); !* Opera 11.1 - 12.0 *!*/
+  /*background: -moz-linear-gradient(90deg, #57405a, #bfa67e,#627e96); !* Firefox 3.6 - 15 *!*/
+  /*background: linear-gradient(90deg, #57405a, #bfa67e,#627e96); !* 标准的语法 *!*/
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  height: 2px;
+
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+

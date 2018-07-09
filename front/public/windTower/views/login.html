@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="FrankFang,弗兰克,">
+    <meta name="description" content="">
+    <meta name="Author" content="Frank Fang">
+    <meta name="Language" scheme="Language Codes" content="zh-CN">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <title>上海电气智能风电</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Bootstrap -->
+    <link href="plugins/bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <link href="plugins/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <!-- 自定义样式 -->
+    <link href="css/custom-css.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- 登录框 START -->
+<div class="login-bg clearfix">
+    <div class="login-panel well">
+        <input type="hidden" id="isReturn" value="<%=isReturn%>">
+        <input type="hidden" id="url" value="<%=url%>">
+        <input type="hidden" id="wfCode" value="<%=wfCode%>">
+        <input type="hidden" id="isHealth" value="<%=isHealth%>">
+
+        <div class="logo page-header"><a href="#" title="上海电气智能风电风云"><img src="images/logo-black.png" width="120"
+                                                                          height="30"> 智能风电（云端）</a>
+            <small>用户登录</small>
+        </div>
+        <form class="form-horizontal" id="login" name="login" method="post" action="/login">
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-2 control-label">用户名</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+
+                <div class="col-sm-9">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="rememberUser">
+                            记住用户名 </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" onclick="logins()" class="btn btn-success btn-lg">登录</button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>当前版本：<%=versionNo%></label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- 消息提示 模态框（Modal）    开始  -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog w400">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
+                <h4 class="modal-title" id="myModalLabel">提示信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form id="addCurve" name="addCurve" method="post" class="form-horizontal" action="/addCurve">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <span class="spanr" id="message"></span>
+                            </div>
+                        </div>
+                        <div class="form-actions tcp15">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+<!-- 消息提示 模态框（Modal）    结束  -->
+
+
+<!-- 登录框 END -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="plugins/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="plugins/bootstrap.min.js"></script>
+<script src="plugins/jquery.cookie.js"></script>
+<!-- holder js -->
+<script src="plugins/holder.min.js"></script>
+<!-- other js -->
+<script src="plugins/bootstrap-switch.min.js"></script>
+<script src="plugins/jquery.range.js"></script>
+<script src="js/configure/js.js"></script>
+<!--<script src="plugins/jquery.mCustomScrollbar.concat.min.js"></script>-->
+<!–[if IE]>
+<script src="plugins/html5.js"></script>
+<![endif]–>
+
+
+<script type="text/javascript">
+
+    jQuery().ready(function () {
+        var userName = $.cookie("userName");
+        if (!isEmpty(userName)) {
+            var checkbox = document.getElementById('rememberUser');//
+            checkbox.checked = true;
+        }
+        $('#username').val(userName);
+    });
+
+    //回车键
+    $(document).keyup(function (event) {
+        if (event.keyCode == 13) {
+            logins();
+        }
+    });
+    var hrefUrl = window.location.href;
+    var ip = hrefUrl.substring(hrefUrl.indexOf("//") + 2, hrefUrl.lastIndexOf(":"));
+
+    //登录方法function
+    function logins() {
+        var name = $('#username').val();
+        var pass = $('#password').val();
+        var mydate = new Date();
+        var str = "" + mydate.getFullYear() + "年";
+        str += (mydate.getMonth() + 1) + "月";
+        str += mydate.getDate() + "日";
+        str += " " + mydate.toLocaleTimeString();
+        var time = str;
+        if (name == '') {
+            $('#message').html("用户名不能为空！");
+            $('#myModal').modal('show');
+            return false;
+        }
+
+        if (pass == '') {
+            $('#message').html("密码不能为空！");
+            $('#myModal').modal('show');
+            return false;
+        }
+        $.post("/windTower/login", {username: name, password: pass, time: time, ip: ip}, function (data) {
+            if (data.message != '') {
+                $('#message').html(data.message);
+                $('#myModal').modal('show');
+            } else {
+                var checkbox = document.getElementById('rememberUser');//
+                if (checkbox.checked) {
+                    //设置 cookie 用户名
+                    $.cookie("userName", name, {expires: 30});
+                } else {
+                    $.cookie("userName", "", {expires: 30});
+                }
+                $.cookie("isClose", "false", {expires: 30});
+                $.cookie("operateId", guid(), {expires: 30});
+                if ($("#isReturn").val() == "true") {
+                    //推送到专家，专家登录后显示故障详情
+                    window.location.href = $("#url").val() + "&isHealth=" + $("#isHealth").val() + "&wfCode=" + $("#wfCode").val();
+                } else {
+                    window.location.href = "/windTower/index?before_time=" + data.before_time;
+                }
+            }
+        });
+    }
+
+    //视频项目 operateId
+    function guid() {
+        function S4() {
+            return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+        }
+
+        return (S4() + S4() + S4() + S4() + S4() + S4() + S4() + S4());
+    }
+
+</script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</body>
+</html>

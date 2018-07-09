@@ -1,0 +1,15 @@
+/* 发电机红点 */
+.fan01-txt li#fan-15 {
+    left: 330px;
+    top: 130px;
+}
+
+/* 齿轮箱 */
+.fan01-txt li#fan-16 {
+    left: 275px;
+    top: 160px;
+}
+
+.unavailable {
+    background-color: #666;
+}

@@ -1,0 +1,58 @@
+<!--  添加/修改 模态框 开始-->
+<input type="hidden" id="towerId">
+<div class="modal fade" id="warnViewModel" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true"
+     data-backdrop='static' data-keyboard=false>
+    <div class="modal-dialog broadcastModalDialog" style="height: 640px;width:1000px;">
+        <div class="modal-content broadcastModalContent" style="height:100%;width:100%">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">
+                    &times;
+                </button>
+                <div class="col-sm-12">
+                    <div class="col-sm-4">
+                        <h4 id="myModalLabel">
+                            测风塔添加
+                        </h4>
+                    </div>
+                    <div class="col-sm-1">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            日期
+                        </label>
+                    </div>
+                    <div class="col-sm-3">
+                        <div id="dataTimeDiv"></div>
+                        <script type="text/javascript">
+                            $('#dataTimeDiv').buildCalendar("dataTime", {})
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body broadcastModalBody clearfix">
+                <div id="dataTableDev" class="modal-body broadcastModalBody2 tableDiv col-sm-12 clearfix" style="height: 220px">
+                    <table id="dataTable"
+                           class="table table-bordered table-striped table-condensed clearfix"></table>
+                </div>
+                <div class="col-sm-12">
+                    <div class="col-sm-1">
+                        <label id="tragetName" class="text-right" style="white-space: nowrap;"/>
+                    </div>
+                </div>
+                <div class="col-sm-12" style="height: 200px">
+                    <div id="windSpeedCharts" style=""></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btnCancel" type="button" class="btn btn-default"
+                        data-dismiss="modal" style="width: 80px;">
+                    关闭
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal -->
+</div>
+<script src="js/warnView.js"></script>

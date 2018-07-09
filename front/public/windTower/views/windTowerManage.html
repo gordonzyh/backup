@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="app" class="">
+<%- include('include/html-head.html') %>
+<!-- 头部 -->
+<%- include('include/header.html') %>
+<!--侧边栏-->
+<%- include('include/aside.html') %>
+<body>
+<article id="article" class="article-md clearfix articleFather">
+    <div class="col-sm-12">
+        <div class="col-sm-1" style="padding-top:9px">
+            <button id="btnAdd" class="btn btn-sm btnCss3 btn-default" authUrl="/windTower/windTowerDetail/add"  authAction="hidden">
+                <span class="glyphicon glyphicon-plus" style="color:#239A3D;"></span>
+                添加
+            </button>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-1" style="padding-top:9px">
+            <label for="searchInp" class="pull-right">测风塔:</label>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group dataTables_filter">
+                <input id="searchInp" type="search" class="form-control"
+                       style="margin-right:0px"/>
+                <button id="searchBtn" class="btn btn-default search-btn" type="button"
+                        style="width:50px;right:auto;">
+                    <img src="images/search.png" class="mCS_img_loaded">
+                </button>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-1" style="padding-top:9px">
+            <label for="companySearchInp" class="pull-right"
+                   style="white-space:nowrap;">所属公司:</label>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group dataTables_filter">
+                <input id="companySearchInp" type="search" class="form-control"
+                       style="margin-right:0px"/>
+                <button id="companySearchBtn" class="btn btn-default search-btn" type="button"
+                        style="width:50px;right:auto;">
+                    <img src="images/search.png" class="mCS_img_loaded">
+                </button>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+        <div id="windTowerTableDev" class="modal-body broadcastModalBody2 tableDiv col-sm-12">
+            <table id="windTowerTable"windTowerTable
+                   class="table table-bordered table-striped table-condensed"
+                   style="overflow-y: auto"></table>
+        </div>
+    </div>
+</article>
+<%- include('windTowerDetail.html') %>
+<script src="js/windTowerManageList.js"></script>
+</body>
+<%- include('include/footer.html') %>
+</html>

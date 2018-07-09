@@ -1,0 +1,36 @@
+<!--侧边栏-->
+<div class="aside-mask"
+     style="width: 100%;height:100%;display: none;position: fixed;background-color:
+     rgba(0,0,0,0.3);z-index:20;"></div>
+<!--侧边栏-->
+<aside id="aside" class="navbar navbar-inverse navbar-fixed-top asideFather">
+    <ul class="sidebar"></ul>
+    <!--新版修改html-->
+    <ul class="sidebar skin">
+        <li class="sidebar-logo">
+            <div class="sidebar-logo-logo">
+                <img src="images/ver-logo.png" alt="" class="sidebar-ver-logo">
+                <img src="images/logo-fengyun.png" alt="" class="sidebar-fengyun-logo">
+            </div>
+            <!--<div class="sidebar-logo-global-show" style="display: none;">智能风电</div>-->
+            <div class="sidebar-logo-text" style="display: inline-block;font-size: 14px;">智能风电</div>
+            <img src="images/logo-fengyun.png" alt="" style="display: none; margin-left:3px;"
+                 class="sidebar-logo-fengyun">
+        </li>
+        <li class="sidebar-user">
+            <img id="userface" src="images/user-img.png" alt="">
+            <div class="sidebar-user-name"></div>
+        </li>
+    </ul>
+</aside>
+
+<script type="text/javascript">
+    $(function () {
+        //设置用户名
+        $('.sidebar-user-name').text($("#top_show_username").val());
+
+        function showms(id) {
+            $('#' + id).children(".glyphicon").toggleClass("glyphicon-minus-sign").parent().next("ul").slideToggle();
+        }
+    });
+</script>

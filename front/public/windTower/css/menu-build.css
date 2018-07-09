@@ -1,0 +1,120 @@
+/*整体*/
+.sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.sidebar-menu > li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/*第一层*/
+.sidebar-menu > li > a {
+    padding: 12px 5px 12px 5px;
+    display: block;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-menu > li > a > .fa {
+    width: 20px;
+}
+
+/*第二层以下*/
+.sidebar-menu > li > .treeview-menu {
+    margin: 0 1px;
+}
+
+/*尾部*/
+.sidebar-menu > li .label,
+.sidebar-menu > li .badge {
+    margin-top: 3px;
+    margin-right: 5px;
+}
+
+
+/*展开时，展开部分设定*/
+.sidebar-menu li.active > .treeview-menu {
+    display: block;
+}
+
+/*.sidebar-menu a {*/
+/*color: #b8c7ce;*/
+/*text-decoration: none; }*/
+/*底层初期表示*/
+.sidebar-menu .treeview-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 0px;
+}
+
+/*.sidebar-menu .treeview-menu .treeview-menu {*/
+/*padding-left: 20px; }*/
+.sidebar-menu .treeview-menu > li {
+    margin: 0;
+}
+
+/*第二层以下*/
+.sidebar-menu .treeview-menu > li > a {
+    padding: 5px 5px 5px 0px;
+    display: block;
+    font-size: 14px;
+}
+
+.sidebar-menu .treeview-menu > li > a > .fa {
+    width: 20px;
+}
+
+.sidebar-menu .treeview-menu > li > a > .fa-angle-left,
+.sidebar-menu .treeview-menu > li > a > .fa-angle-down {
+    width: auto;
+}
+
+/*整体*/
+.menuDiv {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius:  5px 5px 5px 5px;
+    color: rgba(245, 245, 255, 0.8);
+    overflow:hidden;
+    height: 100%;
+}
+.level1.active > a,
+.level2.active > a,
+.level3.active > a {
+    background: rgba(255, 255, 255, 0.2)!important;
+}
+.level1:hover > a,
+.level2:hover > a,
+.level3:hover > a {
+    background: rgba(0, 0, 0, 0.2) ;
+    border-left-color: #3c8dbc;
+}
+.level1 > a ,.level2 > a, .level3 > a{
+    /*color: #0d0d0d;*/
+    color: #f2f2f2;
+}
+.level2 > a{
+    padding-left: 20px!important;
+}
+.level3 > a{
+    padding-left: 40px!important;
+}
+.level1  {
+    background: rgba(0, 0, 0, 0.0);
+}
+
+.level2  {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.level3  {
+    background: rgba(0, 0, 0, 0.1);
+}
+.badge {
+    background: red;
+}

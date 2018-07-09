@@ -1,0 +1,29 @@
+    <div id="tag" style="height:410px;width:400px;display:none">
+        <div class="modal-content" style="width:100%;height:100%;">
+            <div class="modal-header" style="padding:5px">
+                <div id="title" class="col-xs-9" style="font-size:25px;text-align:right"></div>
+                <div class="col-xs-3">
+                    <button id="btnDetail" type="button" class="btn btn-default" style="width: 60px;float:right">详情
+                    </button>
+                </div>
+            </div>
+            <div style="position:relative;height:362px">
+                <div class="clearfix" style="font-size:20px;text-align: center;padding:5px">
+                    <div class="col-xs-5">
+                        <span style="float:left">高度:<span id="maxHeight"></span>m</span>
+                    </div>
+                    <div class="col-xs-7">
+                        平均风速:<span id="averageSpeed"></span>m/s
+                    </div>
+                </div>
+                <div class="modal-footer" style="font-size:20px;text-align: center;padding:5px">
+                    <div class="col-xs-6">
+                        <span style="float:left">风能玫瑰图</span>
+                    </div>
+                </div>
+                <div id="windFloatCharts"
+                     style="height: 90%;width:90%;position:absolute;z-index:110;top: 38px;left:35px"></div>
+            </div>
+        </div>
+        <div id="arrow" class="arrow"></div>
+    </div>

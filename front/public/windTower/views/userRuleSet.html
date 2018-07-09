@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="app" class="">
+<%- include('include/html-head.html') %>
+<!-- 头部 -->
+<%- include('include/header.html') %>
+<!--侧边栏-->
+<%- include('include/aside.html') %>
+
+<body  class="">
+<article id="article" class="article-md clearfix articleFather">
+    <div class="col-sm-3" style="height: 100%">
+    <div id="menuDiv" class="menuDiv"></div>
+</div>
+<div class="col-sm-9" style="height: 100%">
+    <div class="col-sm-12" style="padding-top: 20px">
+        <div class="col-sm-2">
+            <label class="text-right" style="width:89%;padding-top: 7px">
+                用户名
+            </label>
+        </div>
+        <div class="col-sm-3">
+            <input id="userName" type="text" class="form-control" readonly="readonly">
+        </div>
+    </div>
+    <div class="col-sm-12" style="padding-top: 5px">
+        <div class="col-sm-2">
+            <label class="text-right" style="width:89%;padding-top: 7px">
+                姓名
+            </label>
+        </div>
+        <div class="col-sm-3">
+            <input id="nickName" type="text" class="form-control" readonly="readonly">
+        </div>
+    </div>
+    <div class="col-sm-12" style="padding-top: 5px">
+        <div class="col-sm-2">
+            <label class="text-right" style="width:89%;padding-top: 7px">
+                有效日期
+            </label>
+            <span style="color:red">*</span>
+        </div>
+        <div class="col-sm-3">
+            <div id="effDateDiv"></div>
+            <script type="text/javascript">
+                $('#effDateDiv').buildCalendar("effDate", {})
+            </script>
+        </div>
+    </div>
+    <ul id="myTab" class="nav nav-tabs">
+        <li class="active"><a href="" style="margin-top: 10px" onclick="$('#windTowerTableDev').show();$('#treeDiv').hide();"
+                              data-toggle="tab">测风塔权限</a></li>
+        <li><a href="" style="margin-top: 10px" onclick="$('#windTowerTableDev').hide();$('#treeDiv').show();"
+               data-toggle="tab">菜单权限</a></li>
+    </ul>
+    <div id="windTowerTableDev" class="modal-body broadcastModalBody2 tableDiv">
+        <table id="windTowerTable"
+               class="table table-bordered table-striped table-condensed" ></table>
+    </div>
+    <div id="treeDiv" style="height: 300px;padding-top: 10px"></div>
+</div>
+<script src="js/userRuleSet.js"></script>
+</article>
+</body>
+<%- include('include/footer.html') %>
+</html>

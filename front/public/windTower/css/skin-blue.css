@@ -1,0 +1,119 @@
+body,html{
+	background: -webkit-linear-gradient(84deg, #F0FCFF, #F0FCFF,#F0FCFF); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(84deg, #F0FCFF, #F0FCFF,#F0FCFF); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(84deg, #F0FCFF, #F0FCFF,#F0FCFF); /* Firefox 3.6 - 15 */
+	background: linear-gradient(84deg, #F0FCFF, #F0FCFF, #F0FCFF); /* 标准的语法 */
+}
+/*header*/
+.headerFather,
+.navFather{
+	/*background: -webkit-linear-gradient(#68b169, #265827); !* Safari 5.1 - 6.0 *!*/
+	/*background: -o-linear-gradient(#68b169, #265827); !* Opera 11.1 - 12.0 *!*/
+	/*background: -moz-linear-gradient(#68b169, #265827); !* Firefox 3.6 - 15 *!*/
+	/*background: linear-gradient(#68b169, #265827); !* 标准的语法 *!*/
+	background-color: #F0FCFF;
+}
+.member-info a{
+	opacity: 1;
+}
+.headerFather>.member-info.skin a img{
+	opacity:1!important;
+}
+.nav-drawTime,
+.bread-page-er,
+.bread-page-first{
+	color: #343434!important;
+}
+.navFather .nav-list>li>a:hover {
+	color: #1e1e1e !important;
+}
+.navFather .nav-list>li>a {
+	color: #343434!important;
+	text-shadow: none;
+}
+/*header -----over*/
+
+/*aside*/
+.asideFather{
+	/*background: -webkit-linear-gradient(right,#eeecec, #a5a5a5); !* Safari 5.1 - 6.0 *!*/
+	/*background: -o-linear-gradient(right,#eeecec, #a5a5a5); !* Opera 11.1 - 12.0 *!*/
+	/*background: -moz-linear-gradient(right,#eeecec, #a5a5a5); !* Firefox 3.6 - 15 *!*/
+	/*background: linear-gradient(right,#eeecec, #a5a5a5); !* 标准的语法 *!*/
+	background-color: #F0FCFF!important;
+	border-right:1px solid rgba(0,0,0,0.2) !important;
+}
+.asideFather .sidebar-user-name,
+.asideFather .sidebar-lists{
+	color:#000;
+}
+.contract span{
+	color:#000;
+}
+/*aside----over*/
+
+/*article*/
+.articleFather .panel-default,
+.articleFather .center-echarts,
+.articleFather .dataTables_wrapper{
+	background-color: #D9E6F5!important;
+}
+.articleFather .radio-inline {
+	color: #343434;
+	background-color: #fff;
+}
+.articleFather .radio-inline:hover {
+	background-color: #1872E2!important;
+	color: #fff;
+}
+.turbuine-select,
+#timeName,
+.dataTable,
+.dataTables_wrapper .dataTables_length{
+	color: #343434!important;
+}
+table.dataTable thead .sorting {
+	text-shadow: none!important;
+}
+.dataTables_filter input,
+.search-btn{
+	background: rgba(0,0,0,0.1);
+}
+.charts-line {
+	background-color: #282828;
+	z-index: 9;
+}
+.search-btn:hover, .search-btn.active, .search-btn:active, .search-btn:active:focus {
+	background: rgba(0,0,0,0.2);
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+	background-color: #EAF0F7;
+}
+.dataTables_wrapper input.power, .dataTables_wrapper input.contractPower {
+	color: #343434;
+	background-color: #fff;
+}
+/*article---over*/
+.footer-father {
+	color: RGBA(52, 52, 52, 1);
+	text-shadow: none;
+}
+
+/*表格页码样式*/
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+	color: rgba(0, 0, 0, 0.5)!important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+	color: rgba(0, 0, 0, 0.5)!important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+	color: rgba(0, 0, 0, 0.5) !important;
+}
+/*标签样式*/
+.tab-box .nav-tabs li a {
+	background-color: #fff!important;
+	color: rgba(0, 0, 0, 0.5);
+}
+.tab-box .nav-tabs li.active a {
+	background-color: #d9e6f5!important;
+	color: rgba(0, 0, 0, 0.5);
+}

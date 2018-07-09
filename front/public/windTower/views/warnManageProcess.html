@@ -1,0 +1,127 @@
+<div class="modal fade" id="processModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     data-backdrop='static' data-keyboard=false>
+    <div class="modal-dialog broadcastModalDialog" style="height: 575px;width:800px;">
+        <div class="modal-content broadcastModalContent" style="width:100%;">
+            <div class="modal-header" style="height:97px;">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">
+                    &times;
+                </button>
+                <h4 id="myModalLabel">
+                    报警处理
+                </h4>
+                <div class="rightContent " style="width: 99%">
+                    <ul id="warnProcessTabs" class="nav nav-tabs" style="border:0px;">
+                        <li class="active">
+                            <a href="#dummy" onclick="showAndHidden('changeData')" data-toggle="tab">数据替换</a>
+                        </li>
+                        <li><a href="#dummy" onclick="showAndHidden('processMemo')" data-toggle="tab">备注处理</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="changeDataTab" class="modal-body broadcastModalBody clearfix">
+                <form id="upload" method="POST" class="form-horizontal" enctype="multipart/form-data"
+                      action="dataManageDetail/dataUpload">
+                    <div class="col-sm-12" style="margin-top: 5px">
+                        <div class="col-sm-2">
+                            <label class="text-right" style="width:100%;padding-top: 7px">
+                                文件位置
+                            </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input id="localFile" name="localFile" type="file" multiple class="file-loading"
+                                   data-show-preview="false">
+                        </div>
+                        <div class="col-sm-2">
+                            <label class="text-right" style="width:100%;padding-top: 7px">
+                                数据密码
+                            </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input id="dataPasswordHid" name="text" type="text" class="form-control" style="display: none">
+                            <input id="password" name="password" type="password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="margin-top: 5px">
+                        <div class="col-sm-2">
+                            <label class="text-right" style="width:100%;padding-top: 7px">
+                                文件类型
+                            </label>
+                        </div>
+                        <div class="radio col-sm-1">
+                            <label><input type="radio" name="fileType" id="optionsRadios1" value="RWD" checked>
+                                RWD</label>
+                        </div>
+                        <div class="radio col-sm-1">
+                            <label><input type="radio" name="fileType" id="optionsRadios2" value="csv">csv</label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12" style="margin-top: 5px">
+                        <div class="col-sm-2">
+                            <label class="text-right" style="width:100%;padding-top: 7px">
+                                待处理日期
+                            </label>
+                        </div>
+                        <div id="waitProcess" class="col-sm-10" style="padding-top:7px">
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="margin-top: 5px">
+                        <div class="col-sm-2">
+                            <label class="text-right" style="width:100%;padding-top: 7px">
+                                处理备注
+                                <span style="color:red">*</span>
+                            </label>
+                        </div>
+                        <div class="col-sm-10">
+                            <textarea id="processMemo" name="processMemo" class="form-control" rows="3"
+                                      style="resize:none;"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12" style="margin-top: 5px">
+                        <div class="col-sm-2">
+                            <label class="text-right" style="width:100%;padding-top: 7px">
+                                处理结果
+                            </label>
+                        </div>
+                        <div class="col-sm-10" style="padding:-1px;">
+                            <ul id="updStatus" class="list-group"
+                                style="margin:0;border:1px solid black;height:150px;overflow: auto;"></ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div id="processMemoTab" class="modal-body broadcastModalBody clearfix">
+                <div class="col-sm-12" style="margin-top: 5px">
+                    <div class="col-sm-2" style="padding-right: 0px;">
+                        <label class="text-right" style="width:100%;padding-top: 7px">
+                            处理备注
+                            <span style="color:red">*</span>
+                        </label>
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="col-sm-12">
+                            <textarea id="processMemo2" name="processMemo" class="form-control" rows="3"
+                                      style="resize:none;"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="col-lg-12">
+                    <button id="btnUpd" type="button" class="btn btn-primary" style="width: 80px;"> 上传</button>
+                    <button id="save" type="button" class="btn btn-primary" style="width: 80px;">保存</button>
+                    <button id="btnProcessCancel" type="button" class="btn btn-default"
+                            data-dismiss="modal" style="width: 80px;">
+                        取消
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/warnManageProcess.js"></script>

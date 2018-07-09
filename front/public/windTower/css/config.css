@@ -1,0 +1,39 @@
+#addOpcTagsForm .prams{
+    margin-left: 15%;
+}
+#addOpcTagsForm label{
+    text-align: left;
+}
+#addOpcTagsForm #_id{
+    margin-left:-40%;
+}
+
+#addOpcPublishForm label{
+    text-align: left;
+}
+
+#addOpcPublishForm .opcItem label{
+    text-align: center;
+}
+
+#addOpcPublishForm .item div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.opcPublish{
+    border:1px solid white;
+}
+
+.pageInput,.addInput{
+	width:41%;height:32px;margin-left:6px;color:#333;display:inline;
+}
+.pageSelect,.addSelect{
+	width:41%;height:32px;margin-left:6px;color:#333;display:inline;
+}
+.pageDiv,.addDiv{
+	margin-left:10%;
+	margin-top:20px;
+}
+.required{
+    display:inline;width:93%;
+}

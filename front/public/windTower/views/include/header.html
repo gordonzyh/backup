@@ -1,0 +1,123 @@
+<!--顶部右侧设定按钮-->
+<input type="hidden" value="<%=authJson%>" id="authJson"/>
+<input type="hidden" value="" id="towerIdList"/>
+
+<header id="header" style="z-index: 10;" class="headerFather">
+    <div id="rightBtnDiv" class="member-info pull-right skin">
+        <a href=""><img src="images/help-icon.png" alt=""></a>
+        <a id="warnManageA" href="#dummy" style="position:relative" authUrl="/windTower/warnManage" authAction="hidden">
+            <img src="images/bell.png" alt="">
+            <div id="msg-icon" class="msg-icon"></div>
+        </a>
+        <a href="javascript:;" id="settingIcon"><img src="images/settings.png" alt=""></a>
+        <a href="."><img src="images/exit-2.png" alt=""></a>
+    </div>
+    <ul class="skin-btn list-inline pull-right">
+        <li id="skinBlack" class="skin-btn-black active" title="黑"></li>
+        <li id="skinWhite" class="skin-btn-white" title="白"></li>
+        <li id="skinBlue" class="skin-btn-blue" title="蓝"></li>
+    </ul>
+
+    <div class="nav-settings-dropdown">
+        <div class="settings-dropdown-triArrow"></div>
+        <div class="settings-dropdown-lan settings-dropdown">
+            <span class="settings-dropdown-header">语言选择</span>
+            <select name="" id="settingsDropdownLan">
+                <option value="简体中文">简体中文</option>
+                <option value="繁体中文">繁体中文</option>
+                <option value="英文">英文</option>
+            </select>
+        </div>
+        <div class="settings-dropdown-theme settings-dropdown">
+            <span class="settings-dropdown-header">主题选择</span>
+            <div class="settings-dropdown-theme-bg">
+                <div class="settings-dropdown-theme-color c-colorful"></div>
+            </div>
+            <div class="settings-dropdown-theme-bg">
+                <div class="settings-dropdown-theme-color c-white"></div>
+            </div>
+            <div class="settings-dropdown-theme-bg">
+                <div class="settings-dropdown-theme-color c-blue"></div>
+            </div>
+            <div class="settings-dropdown-theme-bg">
+                <div class="settings-dropdown-theme-color c-red"></div>
+            </div>
+        </div>
+    </div>
+<script src="js/configure/skin-change-js.js"></script>
+<!--顶层菜单栏-->
+<nav id="nav" class="nav-md navFather" style="">
+    <div class="nav-header-container showDrop-container"
+         style="overflow: hidden;display: inline-block;float: right;width:50%;height:43px;">
+        <div id="tab" class="member-info pull-right skin" style="border:0;">
+            <a id="mapA" href="#dummy" data-toggle="tab" authUrl="/windTower/mapDisplay" authAction="hidden">地图展示</a>
+            <a id="datamanageA" href="#dummy" data-toggle="tab" authUrl="/windTower/dataManage" authAction="hidden">数据管理</a>
+            <a id="windTowerManageA" href="#dummy" id="myTabDrop1" data-toggle="tab" authUrl="/windTower/windTowerManage" authAction="hidden" >测风塔管理</a>
+            <a id="AuthoryA" href="#dummy" data-toggle="tab" authUrl="/windTower/userRuleSet"  authAction="hidden">权限管理</a>
+        </div>
+    </div>
+
+    <!--单机页增加-->
+    <div class="bread-page">
+        <a href="./index"><img src="images/global/home.png" alt=""></a>
+        <img src="images/global/bread-right.png" alt="">
+        <a href="./index" class="bread-page-first">测风塔管理系统</a>
+    </div>
+    <div class="fengji-name">
+        <img id="ownerLogo">
+        <span class="fengji-name-windName" id="top_show_windname"></span>
+        <div class="nav-drawTime"></div>
+    </div>
+</nav>
+</header>
+
+<script>
+    var authJson = JSON.parse($("#authJson").val());
+    function showSubPage(pageName) {
+        if (pageName === 'toMap') {
+            window.location.href = '/windTower/mapDisplay';
+        } else if (pageName === 'toDataManage') {
+            window.location.href = '/windTower/dataManage';
+        } else if (pageName === 'toWindTowerManage') {
+            window.location.href = '/windTower/windTowerManage';
+        } else if (pageName === 'toAuthority') {
+            window.location.href = '/windTower/userRuleSet';
+        } else if (pageName === 'toWarnManage') {
+            window.location.href = '/windTower/warnManage';
+        }
+    }
+
+    $(function () {
+        //权限警告msg
+        var msgCode = $.getUrlParam("errorCode");
+        if (msgCode) {
+            error(getMessage(msgCode));
+        }
+
+        $('#tab a,#warnManageA').on('click', function () {
+            if (!$(this).is('.active')) {
+                if ($(this).is($('#mapA'))) {
+                    showSubPage('toMap');
+                } else if ($(this).is($('#datamanageA'))) {
+                    showSubPage('toDataManage');
+                } else if ($(this).is($('#windTowerManageA'))) {
+                    showSubPage('toWindTowerManage');
+                } else if ($(this).is($('#AuthoryA'))) {
+                    showSubPage('toAuthority');
+                } else if ($(this).is($('#warnManageA'))) {
+                    showSubPage('toWarnManage');
+                }
+            }
+
+        });
+
+        var socket = io.connect('<%=socketURL%>');
+        socket.on('refreshWarningCount', function (data) {
+            if (data.count > 0) {
+                $('#msg-icon').css('display', 'block');
+            }
+        });
+    });
+
+
+</script>

@@ -1,0 +1,136 @@
+<div class="modal fade" id="updModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     data-backdrop='static' data-keyboard=false autocomplete="off">
+    <div class="modal-dialog broadcastModalDialog" style="height: 575px;width:800px;">
+        <div class="modal-content broadcastModalContent" style="width:100%">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">
+                    &times;
+                </button>
+                <h4 id="myModalLabel">
+                    数据上传
+                </h4>
+            </div>
+            <div class="modal-body broadcastModalBody clearfix">
+                <form id="upload" method="POST" class="form-horizontal" enctype="multipart/form-data">
+                    <div class="col-sm-12">
+                        <div class="col-sm-2" style="padding-right: 0px;">
+                            <label class="text-right" style="width:100%;padding-top: 7px">
+                                上传描述
+                                <span style="color:red">*</span>
+                            </label>
+                        </div>
+                        <div class="col-sm-10">
+                            <input id="updMemo" name="updMemo" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="margin-top: 5px">
+                        <div class="col-sm-2">
+                            <label class="text-right" style="width:100%;padding-top: 7px">
+                                文件位置
+                            </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input id="localFile" name="localFile" type="file" multiple class="file-loading"
+                                   data-show-preview="false">
+                        </div>
+                        <div class="col-sm-2">
+                            <label class="text-right" style="width:100%;padding-top: 7px">
+                                数据密码
+                            </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input id="dataPasswordHid" name="text" type="text" class="form-control" style="display: none">
+                            <input id="dataPassword" name="dataPassword" type="password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="margin-top: 5px">
+                        <div class="col-sm-2">
+                            <label class="text-right" style="width:100%;padding-top: 7px">
+                                可上传文件类型:
+                            </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="text-left" style="width:100%;padding-top: 7px">
+                                txt,tim,rwd,csv
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="margin-top: 5px">
+                        <div class="col-sm-2">
+                            <label class="text-right" style="width:100%;padding-top: 7px">
+                                开始时间
+                            </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <div id="startDateDetailDiv"></div>
+                            <script type="text/javascript">
+                                $('#startDateDetailDiv').buildCalendar("startDateDetail", {})
+                            </script>
+                        </div>
+                        <div class="col-sm-1">
+                            <label class="text-right" style="width:100%;padding-top: 7px">
+                                间隔
+                            </label>
+                        </div>
+                        <div class="col-sm-2">
+                            <input id="interval" name="interval" class="form-control" size="16" type="text">
+                            <script>
+                                $("#interval").buildNumber({
+                                    min: 1,
+                                    max: 9999,
+                                });
+                                $("#interval")[0].parentNode.style.width = "100%";
+                            </script>
+                        </div>
+                        <div class="col-sm-1">
+                            <label class="text-left" style="padding-top: 7px;margin-left: -10px;">
+                                分
+                            </label>
+                        </div>
+                        <div class="col-sm-1">
+                            <label class="text-right" style="width:100%;padding-top: 7px">
+                                高度
+                            </label>
+                        </div>
+                        <div class="col-sm-2">
+                            <input id="height" name="height" class="form-control" size="16" type="text" value="">
+                            <script>
+                                $("#height").buildNumber({
+                                    min: 1,
+                                    max: 9999,
+                                });
+                                $("#height")[0].parentNode.style.width = "100%";
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="margin-top: 5px">
+                        <div class="col-sm-2">
+                            <label class="text-right" style="width:100%;padding-top: 7px">
+                                上传状态
+                            </label>
+                        </div>
+                        <div class="col-sm-10" style="padding:-1px;">
+                            <ul id="updStatus" class="list-group"
+                                style="margin:0;border:1px solid black;height:150px;overflow: auto;">
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-lg-12">
+                    <button id="btnUpd" type="button" class="btn btn-primary" style="width: 80px;">
+                        上传
+                    </button>
+                    <button id="btnCancel" type="button" class="btn btn-default"
+                            data-dismiss="modal" style="width: 80px;">
+                        取消
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<input id="filePath" type="hidden"/>
+<script src="js/dataManageUpload.js"></script>

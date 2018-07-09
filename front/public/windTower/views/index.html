@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="app">
+<!-- html head Css引用放置位置-->
+<%- include('include/html-head.html') %>
+<!-- 头部 -->
+<%- include('include/header.html') %>
+<!--侧边栏-->
+<%- include('include/aside.html') %>
+
+<!-- 内容  开始 -->
+<input type="hidden" id="topmenuactives" value="/configure">
+<input type="hidden" id="leftmenuactives" value="/summaryList">
+<input type="hidden" id="top_show_username">
+
+<div id="content" class="content">
+    <!-- ***** ARTICLE START ***** -->
+    <article id="article" class="article-md clearfix articleFather" style="height: 100%;padding:
+    0px;overflow: hidden">
+        <div id="myTabContent" class="tab-content" style="height: 100%">
+            <iframe id="subPage" src=""
+                    style="width: 100%;height: 100%;border:0px;overflow: auto;"></iframe>
+        </div>
+    </article>
+    <!-- 内容  结束 -->
+</div>
+<!-- 内容  结束 -->
+
+<!--footer-->
+<%- include('include/footer.html') %>
+
+</body>
+</html>

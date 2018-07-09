@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="">
+<%- include('include/html-head.html') %>
+<!-- 头部 -->
+<%- include('include/header.html') %>
+
+<head>
+
+</head>
+
+<body class="">
+<button id="leftbtn" class="leftbtn" style="left: 0px;"> ></button>
+<div class="sidebar-logo-logo" style="position: fixed;left: 30px;top: 10px;" >
+    <img src="images/ver-logo.png" alt="" class="sidebar-ver-logo"
+         style="display: block;margin-left: 20px">
+    <div class="sidebar-logo-text"
+         style="display: inline-block;font-size: 14px;color: white;">智能风电
+    </div>
+    <img src="images/logo-fengyun.png" alt="" style="display: inline-block; margin-left:3px;"
+         class="sidebar-logo-fengyun">
+</div>
+<article id="article" class="article-md clearfix articleFather">
+<div id="leftArea" style="height:100%;display:none;padding-top: 30px">
+    <div id="menuDiv" class="menuDiv" style="width:100%;"></div>
+    <div>
+        <button id="btnAddTower" type="button" class="btn btn-default" style="width: 100%" authUrl="/windTower/windTowerDetail/add"  authAction="hidden" >测风塔追加</button>
+    </div>
+
+</div>
+<div id="rightArea" class="col-sm-12" style="overflow: hidden;height: 100%;">
+    <div id="towerMap" style="height: 100%"></div>
+</div>
+</article>
+</body>
+<%- include('mapTag.html') %>
+<%- include('windTowerDetailView.html') %>
+<%- include('windTowerDetail.html') %>
+<%- include('include/footer.html') %>
+<script src="http://webapi.amap.com/maps?v=1.3&key=81623da1c4a3ca15baf3f40fc95d6444"></script>
+<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+<script src="js/mapDisplay.js"></script>
+</html>

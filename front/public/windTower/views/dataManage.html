@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="">
+<%- include('include/html-head.html') %>
+<!-- 头部 -->
+<%- include('include/header.html') %>
+<!--侧边栏-->
+<%- include('include/aside.html') %>
+
+<body class="">
+<article id="article" class="article-md clearfix articleFather">
+    <input type="hidden" value="<%=socketURL%>" id="socketURL"/>
+    <input id="backendUploadUrl" value="<%=backendUploadUrl%>" type="hidden"/>
+    <input id="backendMainDataUrl" value="<%=backendMainDataUrl%>" type="hidden"/>
+    <input id="towerId" type="hidden" value="<%=towerId%>"/>
+    <input id="currentUpdIndex" type="hidden" value=""/><!--当前GIRD行的上传序号，再风速风向选择时使用-->
+    <div id="leftArea" class="col-sm-3" style="height: 100%">
+        <div id="menuDiv" class="menuDiv"></div>
+    </div>
+    <div class="col-sm-9">
+        <div class="container col-sm-12" style="margin-bottom: 5px">
+            <div class="col-sm-2" style="padding-top:9px">
+                <label class="pull-right">开始日期:</label>
+            </div>
+            <div class="col-sm-3">
+                <div id="startDateDiv"></div>
+                <script type="text/javascript">
+                    $('#startDateDiv').buildCalendar("startDate", {})
+                </script>
+            </div>
+            <div class="col-sm-2" style="padding-top:9px">
+                <label class="pull-right">结束日期:</label>
+            </div>
+            <div class="col-sm-3">
+                <div id="endDateDiv"></div>
+                <script type="text/javascript">
+                    $('#endDateDiv').buildCalendar("endDate", {})
+                </script>
+            </div>
+        </div>
+
+        <div id="chartsTabDiv"  class="col-sm-12" style="height:42px">
+            <button class="tab-left clearfix btn btnCss3 btn-default fa fa-angle-left"
+                    style="width:35px;height: 75%;float:left;"></button>
+            <button class="tab-right clearfix btn btnCss3 btn-default fa fa-angle-right"
+                    style="width:35px;height: 75%;float:right;"></button>
+            <div id="tabArea" style="width:calc(100% - 51px - 51px);overflow: hidden;">
+                <ul id="chartsTab" class="nav charts-tab-area nav-tabs clearfix" style="height: 40px;"></ul>
+            </div>
+        </div>
+        <div class="col-sm-12">
+        <label id="unit" style="margin-left: 10px;">单位：m/s</label>
+        </div>
+        <div id="windSpeedCharts" class="col-sm-12" style="height: 250px;width:100%;"></div>
+
+        <%- include('dataManageUpload.html') %>
+        <div id="windTowerTableDev" class="modal-body broadcastModalBody2 tableDiv"
+             style="float: left; width: 100%; margin-top: 25px;display: inline-block;">
+            <div>
+                <button class="btn btn-sm btnCss3 btn-default" onclick="openUpd();"
+                        data-quanxian="/saveBroadCastSet" style="margin-bottom: 10px">
+                    上传
+                </button>
+            </div>
+            <table id="windTowerTable"
+                   class="table table-bordered table-striped table-condensed"></table>
+        </div>
+    </div>
+
+
+    <script id="tabTemp" type="text-template">
+        <li>
+            <a href="#dummy" onclick="showCharts({towerHeight:'{towerHeight}',towerIndex:'{towerIndex}',target:'{target}'})"
+               style="border-right: 1px solid rgba(0, 0, 0,0.2);border-radius: 5px;" value="{towerHeight}-{towerIndex}-{target2}" data-toggle="tab">{towerHeightLabel}{targetCN}</a>
+        </li>
+    </script>
+    <script src="js/dataManageList.js"></script>
+    <%- include('waitting.html') %>
+</article>
+</body>
+<%- include('include/footer.html') %>
+
+</html>

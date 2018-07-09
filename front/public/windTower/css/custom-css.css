@@ -1,0 +1,1104 @@
+
+
+
+/* 登陆页 消息提示框 样式 */
+
+
+.w400{
+	width: 400px;
+}
+
+.w800{
+	width: 800px;
+}
+
+
+.spanr{
+	color: red;font-size: 14px;
+}
+
+
+.tcp15{
+	text-align: center;padding-top: 15px;
+}
+
+/* 智能监控-地图 样式 STA */
+#monitor_map{
+	/*background: #666;*/
+}
+.land{
+	stroke:#AAA;
+	stroke-width:0.2;
+	fill:#E4E4E4;
+}
+.regionBase{
+	stroke:#AAA;
+	stroke-width:0.2;
+}
+.region0{
+	fill:#FFDBCB;
+}
+.region0Hover{
+	fill:#FCC0A1;
+}
+.region1{
+	fill:#FFFEDF;
+}
+.region1Hover{
+	fill:#FCFAB9;
+}
+.region2{
+	fill:#CEEFDA;
+}
+.region2Hover{
+	fill:#BBECAE;
+}
+.region3{
+	fill:#CFEEFF;
+}
+.region3Hover{
+	fill:#A4DFFC;
+}
+.region4{
+	fill:#FFDBED;
+}
+.region4Hover{
+	fill:#FDABD4;
+}
+.region5{
+	fill:#D8D1EE;
+}
+.region5Hover{
+	fill:#B8ACDE;
+}
+#tooltip{
+	display: none;
+	position: absolute;
+	width: 300px;
+	height: auto;
+	font-family: simsun;
+	font-size: 14px;
+	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+	background-color: white;
+	border-radius: 5px;
+}
+#areaTooltip{
+	display: none;
+	position: absolute;
+	min-width: 5em !important;
+	height: auto;
+	font-family: simsun;
+	font-size: 14px;
+	color:white;
+	text-align: center;
+	background-color: black;
+	border-radius: 5px;
+}
+.mapMarker{
+	width:12px;
+	height:14px;
+}
+.mapMarkerHover{
+
+}
+/* 智能监控-地图 样式 END */
+
+/*ftp关键字样式*/
+.keyNameInput{
+	width:100%;
+}
+
+/*故障列表展示表格样式*/
+.buttonfault{
+	text-align: center;
+}
+
+
+
+.icon11{
+	width:17px;
+	height:18px;
+	/*top:13px;*/
+	/*right:17px;*/
+	position: absolute;
+	background: url(../../img/img1/cut.png) 0 0 no-repeat;
+}
+
+
+.icon12{
+	width:17px;
+	height:18px;
+	/*top:13px;*/
+	/*right:17px;*/
+	position: absolute;
+	background: url(../../img/img1/plus.png) 0 0 no-repeat;
+}
+/*故障列表展示表格样式*/
+
+
+/*自定义状态码样式*/
+.width1{
+	width:20%;
+}
+.width2{
+	width:35%;
+}
+.width3{
+	width:15%;
+}
+.width4{
+	width:15%;
+}
+.width6{
+	width:5%;
+}
+
+.text{
+	text-align:center
+}
+
+.text-lable{
+	text-align:right
+}
+/*自定义状态码样式*/
+
+
+/*故障详情样式*/
+.tableMainFault{
+	background-color: #323232;
+}
+
+.varNameTable{
+	width:18%;
+	float: left;
+	height:200px;
+	overflow:auto;
+}
+.sysvarNameTable{
+	width:38%;
+	float: left;
+	margin-left: 10px;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+.sysCodeModel{
+	overflow-x:hidden;
+	overflow-y:hidden;
+	align-content: center;
+	width:57%;
+	float: right;
+	border: 0.1px solid ghostwhite;
+	margin-right: 5px;
+}
+.sysModel{
+	overflow-x:hidden;
+	overflow-y:hidden;
+	align-content: center;
+	width: 750px;
+	margin-top: 20px;
+	float: left;
+}
+.echarts{
+	height:180px;
+	width:82%;
+	float: left;
+}
+
+.smallSize{
+	font-size: 14px;
+}
+
+/*
+	快捷通道样式
+*/
+.scActionLeft{
+	width:80%;
+	float:left
+}
+
+.scActionRight{
+	width:20%;
+	float:left
+}
+
+/*故障详情样式*/
+/*隐藏按钮样式*/
+.buttonNone{
+	display: none
+}
+
+
+/*故障处理日志样式*/
+.outLeft{
+	margin-left:40px;
+}
+
+.divcla{
+	width:80%;margin:0 auto;
+}
+
+/*单风机列表页面的瀑布流样式*/
+.wf-main{
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	overflow: hidden;
+}
+.wf-main .wf-cld{
+	position: absolute;
+	padding:5px 8px;
+	width: 33.33%;
+	line-height:18px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+/*单风机列表页面的瀑布流样式*/
+
+
+
+.dataTables_filter {
+	float: right;
+	text-align: right;
+	width: 200px;
+}
+.dataTables_length {
+	float: left;
+	padding-bottom: 10px;
+	font-weight: 100;
+	width: 200px;
+}
+.dataTables_info {
+	float: left;
+	padding-top: 10px;
+	font-size:14px;
+	width:250px;
+}
+
+.dataTable{
+	float: left;
+}
+
+
+/* Full number pagination */
+.paging_full_numbers {
+	float: right;
+	height: 22px;
+	line-height: 22px;
+	padding-top: 10px;
+}
+.paging_full_numbers a:active {
+	outline: none
+}
+.paging_full_numbers a:hover {
+	text-decoration: none;
+}
+
+.paging_full_numbers a.paginate_button,
+.paging_full_numbers a.paginate_active {
+	border: 1px solid #444444;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 2px 5px;
+	margin: 0 3px;
+	cursor: pointer;
+	*cursor: hand;
+	color: #fff !important;
+	font-size:14px;
+}
+
+.paging_full_numbers a.paginate_button {
+	background-color: #333333;
+}
+
+.paging_full_numbers a.paginate_button:hover {
+	background-color: #444444;
+	text-decoration: none !important;
+}
+
+.paging_full_numbers a.paginate_active {
+	background-color: #337AB7;
+}
+.paging_full_numbers a.current {
+	background-color: #337AB7;
+}
+
+.fan-container-top1{
+	padding:0px 0px 150px;
+}
+
+
+
+
+.divcss{
+	color: red;
+}
+
+.divcss a:link {
+    color: red;
+}
+
+
+
+/*故障解决方案录入样式*/
+.leftDiv{
+	width:65%;
+	float:left;
+}
+
+.rightDiv{
+	width:35%;
+	float:left;
+}
+
+.solutionA{
+ cursor: pointer;
+}
+/*故障解决方案录入样式*/
+
+
+
+/*** Sliders **/
+.slider{
+	display:block;
+	margin:5px 0px;
+}
+
+.slider.primary .slider-track{
+	background: #0AA699;
+	background-image:none;
+}
+
+.slider.sucess .slider-track{
+	background: #006DB6;
+	background-image:none;
+}
+
+.slider.info .slider-track{
+	 background-color: #1F3853;
+	 	background-image:none;
+}
+
+.slider.warning .slider-track{
+	background: #FDD01C;
+		background-image:none;
+}
+
+.slider.danger .slider-track{
+	background: #F35958;
+	background-image:none;
+}
+
+.slider.white .slider-track{
+	background: #fff;
+		background-image:none;
+}
+
+.slider.slider-vertical{
+	margin: 0 10px;
+}
+.slider-handle.round {
+
+	opacity:1;
+background: rgb(248,249,250); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(248,249,250,1) 13%, rgba(255,255,255,1) 97%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(13%,rgba(248,249,250,1)), color-stop(97%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(248,249,250,1) 13%,rgba(255,255,255,1) 97%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(248,249,250,1) 13%,rgba(255,255,255,1) 97%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(248,249,250,1) 13%,rgba(255,255,255,1) 97%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(248,249,250,1) 13%,rgba(255,255,255,1) 97%); /* W3C */
+
+	-webkit-box-shadow:inset 0 2px 1px -1px #fff, 0px 1px 3px rgba(0, 0, 0, 0.39);
+-moz-box-shadow:inset 0 2px 1px -1px #fff, 0px 1px 3px rgba(0, 0, 0, 0.39);
+box-shadow:inset 0 2px 1px -1px #fff,0px 1px 3px rgba(0, 0, 0, 0.39);
+	width: 18px;
+	height: 18px;
+}
+.slider.slider-horizontal .slider-handle{
+	margin-top: -7px !important;
+}
+.slider.slider-horizontal .slider-track{
+	 height: 5px !important;
+			 -webkit-border-radius: 8px !important;
+	-moz-border-radius: 8px !important;
+	border-radius: 8px !important;
+-webkit-box-shadow: inset 0px 0px 1px 1px rgba(107,170,165,0.33) !important;
+-moz-box-shadow: inset 0px 0px 1px 1px rgba(107,170,165,0.33)!important;
+box-shadow: inset 0px 0px 1px 1px rgba(107,170,165,0.33)!important;
+}
+.slider.slider-vertical .slider-handle{
+	 margin-left: -10px !important;
+}
+.slider.slider-vertical .slider-track{
+	 width: 5px !important;
+
+}
+.the-icons [class*="span"]:first-child{
+	margin-left:2.5641%;
+}
+.slider-selection{
+	-webkit-border-radius: 8px !important;
+	-moz-border-radius: 8px !important;
+	 border-radius: 8px !important;
+	-webkit-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.11)!important;
+	-moz-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.11)!important;
+	box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.11)!important;
+}
+
+.blue .slider-selection{
+	background-image:none !important;
+	background-color:#0a6ea0!important;
+}
+.red .slider-selection{
+	background-image:none !important;
+	background-color:#000!important;
+}
+.green .slider-selection{
+	background-image:none !important;
+	background-color:#0e766d!important;
+}
+
+
+
+/** modbusPublishInfoModel STA */
+.modbusPublisinfoModelDialog{
+	width: 1200px;
+}
+/** modbuspublishinfo END */
+.public1{
+	width: 100%;padding-top: 10px;
+}
+.public2{
+	width: 100%;padding-top: 10px;padding-right : 10px;
+}
+.public3{
+	width: 100%;
+}
+/** 部件功能的内嵌行级样式*/
+
+.component1{
+	width: 100%;padding-top: 10px;
+}
+.component2{;
+	width: 100%;padding-top: 10px;padding-right : 10px;
+}
+.component3{
+	width: 100%;
+}
+/** 部件的内嵌行级样式*/
+.suit1{
+	width: 100%;padding-top: 10px;
+}
+.suit2{
+	width: 100%;padding-top: 10px;padding-right : 10px;
+}
+.suit3{
+	width: 100%
+}
+/**生产厂商的model*/
+.manufact1{
+	width: 800px;
+}
+.manufact2{
+
+}
+.manufact3{
+
+}
+.manufact4{
+
+}
+.manufact5{
+	width: 95%;float: left;
+}
+.manufact6{
+	width: 95%;float: left;
+}
+.manufact7{
+	color:red;
+}
+.manufact8{
+	text-align: center;padding-top: 15px;
+}
+.manufact9{
+	margin-top: 6px;
+}
+.manufact10{
+	width: 400px;
+}
+.manufact11{
+	clear: both;
+}
+.manufact12{
+	width:150px;
+}
+.manufact13{
+	height: 1px;
+}
+.manufact14{
+	height: 1px;border-top:1px solid #E5E5E5;
+}
+.manufact15{
+	height: 5px;
+}
+.manufact16{
+	height: 3px;
+}
+.manufact17{
+	height: 3px;border-top:1px solid #E5E5E5;
+}
+.manufact18{
+	color:red;float:left;
+}
+.manufact19{
+	height: 30px
+}
+.manufact20{
+	text-align: center;padding-top: 15px;color: #fff;
+}
+/** modbuspublishinfo END */
+
+/**fanpage STA*/
+.fanpageWith{
+	width: 1000px;
+}
+.fanpageClour{
+	color: #000;
+}
+.fanpageBacClour1{
+	background-color : #0F3349;color: #fff;
+}
+.fanpageBacClour2{
+	background: #165070;color: #fff;
+}
+.fanpageAddWith{
+	width: 990px;
+}
+
+.fanpageColor{
+	color:red;
+}
+.fanpageNext{
+	text-align: center;padding-top: 15px;
+}
+.fanpageWith2{
+	width: 400px;
+}
+/**fanpage END */
+/**turbine start*/
+.turbineWith1{
+	width: 90%;
+}
+.turbineDisplay{
+	display:none;
+}
+.turbineDisplay2 {
+	float:left;width:40%;
+}
+.turbineDisplay3{
+	text-align:center;
+}
+.turbineDisplay4{
+	text-align:right;
+}
+.turbineDisplay5{
+	float:left;width:19%;margin-left:1%;
+}
+.turbineDisplay6{
+	padding-top: 15px;
+}
+.turbineDisplay7{
+	width:100px;
+}
+/**turbine end*/
+/**windfield sta*/
+.windfieldWidth{
+	width: 100%;
+}
+.windfieldDisplay1{
+	width:95%;float: left;
+}
+.windfieldDisplay2{
+	width:1000px;
+}
+.windfieldDisplay3{
+	height: 5px;
+}
+/**computeSettings*/
+.computeSettingsWidth{
+	width:80%;
+}
+.computeSettingsCss{
+	border-bottom: 1px
+}
+.computeSettingsCss2{
+	margin-top:10px;
+}
+.computeSettingsCss3{
+	margin-top: 25px;
+}
+.computeSettingsCss4{
+	width: 300px;
+}
+
+.clearBoth{
+	clear: both;
+}
+.width30{
+	width:30%;
+}
+.floatLeft{
+	float:left;
+}
+.width5{
+	width:5%;
+}
+.width55{
+	width:55%;
+}
+.modbusTagsInfoWidth{
+	width:90px;
+}
+.modbusTagsInfoalign{
+	align: right;
+}
+.modbusTagsInfWidth85{
+	width:85%;
+}
+.modbusTagsInfWidth800{
+	width:800px;
+}
+.modbusTagsInfWidth1200{
+	width:1200px;
+}
+.opcTagsMagin{
+	margin-top:13px;
+}
+.opcTagsMaginLeft{
+	margin-left:-10px;
+}
+.ftpFront{
+	font-size:12px;
+}
+/**term STA**/
+.redStarStyle{
+	color: red;
+}
+.termModalDialogWidth{
+	width: 800px;
+}
+.termModalDialog2{
+	width: 400px;
+}
+.termModalContentStyle{
+	color: #000;
+}
+.termModalBodyStyle{
+	padding:10px 0px 20px 17%;
+}
+.termModalLabel{
+	width:86px;text-align: right;
+}
+.termModalHeader{
+	background-color : #0F3349;color: #fff;
+}
+.termFormAction{
+	text-align: center;padding-top: 15px;
+}
+.termModalBody{
+	background: #165070;color: #fff;
+}
+/**term END**/
+/**broadcast STA**/
+.broadcastError{
+	color:red;display: block;text-align: center;
+}
+.broadcastModalDialog{
+	width: 1000px;
+}
+.broadcastModalContent{
+	color: #000;
+}
+.broadcastModalBody{
+	 padding:10px 0px 0px 0px;min-height:450px;
+ }
+.broadcastModalBody3{
+	padding:10px 0px 0px 0px;min-height:330px;
+}
+.broadcastMargintop{
+	margin-top:30px;
+}
+.broadcastStatusCode{
+	width:60%;border:1px solid #ADADAD;color:#333;
+}
+.broadcastType{
+	width: 80%;
+}
+.broadcastTextarea{
+	color:#333;
+}
+.broadcastModalBody2{
+	float:left;width:100%;
+}
+.broadcastTable{
+	margin-top: 30px;border: 1px solid #ddd;
+}
+/**broadcast END**/
+/**singleControl STA**/
+.controlModalDialog{
+	width: 800px;
+}
+.controlModalContent{
+	color: #000;
+}
+.controlModalBody{
+	padding:15px 40px;
+}
+.controlModalLabel{
+	color:red;margin-left:-5%;
+}
+.controlModalDialog2{
+	width: 400px;
+}
+.controlModalHeader{
+	background-color : #0F3349;color: #fff;
+}
+.controlModalBody2{
+	background: #165070;color: #fff;
+}
+.controlModelFormAction{
+	text-align: center;padding-top: 15px;
+}
+/**singleControl END**/
+
+/**singleParts STA**/
+.partsModalDialog{
+	width: 800px;
+}
+.partsModalContent{
+	color: #000;
+}
+.partsModalBody{
+	padding:15px 40px;
+}
+.partsError{
+	color:red;
+}
+.partsContentFont{
+	margin-top:15px;
+}
+/**singleParts END**/
+/**summaryList STA**/
+.summaryRow{
+	width: 100%;padding-top: 10px;
+}
+.summaryModalDialog{
+	width: 500px;
+}
+.summaryModalContent{
+	color: #000;
+}
+.summaryOpton{
+	display:none;
+}
+.summaryControlLabel{
+	color:red;margin-left:-5%;
+}
+.summaryFormAction{
+	text-align: center;padding-top: 15px;
+}
+.summaryModelDialog2{
+	width: 400px;
+}
+.summaryModalDialog3{
+	width: 800px;
+}
+.summaryModalHeader{
+	background-color : #0F3349;color: #fff;
+}
+.summaryModalBody2{
+	background: #165070;color: #fff;
+}
+.summaryModalBody3{
+	background: #165070;color: #fff;
+}
+.summaryFormAction{
+	text-align: center;padding-top: 15px;
+}
+/**summaryList END**/
+/**pageConfigure STA**/
+.pageCheckStyle{
+	display:inline;margin-left:25%;
+}
+.pageRotation{
+	margin-top:-6px;
+}
+.pageShow{
+	margin-top:-6px;margin-left:20px;
+}
+.pageModalDialog{
+	width: 800px;
+}
+.pageModalDialog2{
+	width: 400px;
+}
+.pageModalContent{
+	color: #000;
+}
+.pageModalBody{
+	padding:10px 0px 20px 17%;
+}
+.pageModalLabel{
+	width:80px;text-align: right;
+}
+.pageDivCss{
+	color:red;
+}
+.pageModalHeader{
+	background-color : #0F3349;color: #fff;
+}
+.pageFormAction{
+	text-align: center;padding-top: 15px;
+}
+
+.pageModalBody2{
+	background: #165070;color: #fff;
+}
+/**pageConfigure END**/
+/**FaultStatusCode STA**/
+.faultStatusCodeDiv{
+	width: 100%;padding-top: 10px;
+}
+.faultStatusCodeTable{
+	color: black;
+}
+.faultStatusCodeDialog{
+	width: 900px;
+}
+.faultStatusCodeModalContent {
+	color: #000;
+}
+.faultStatusCodeFormAction{
+	text-align: center;padding-top: 15px;
+}
+/**FaultStatusCode STA**/
+
+/**protocol STA**/
+.protocolRow{
+	width: 100%;padding-top: 10px;
+}
+.protocolRowDiv{
+	border-bottom:1px solid #FFF; padding-bottom: 16px;
+}
+.protocolRowDiv2{
+	border-bottom:1px solid #FFF; padding-bottom: 5px;
+}
+.protocolRowHeight{
+	height: 24px;
+}
+.protocolRowHeight2{
+	height: 5px;
+}.protocolRowHeight3{
+	 height: 3px;
+ }
+.protocolDiv4{
+	height: 3px;border-top:1px solid #E5E5E5;
+}
+
+.protocolModalDialog{
+	width: 800px;
+}
+.protocolDiv3{
+	width: 100%;padding-top: 10px;padding-right : 10px;
+}
+.protocolModalDialog2{
+	width: 400px;
+}
+.protocolModalContent{
+}
+.protocolModalHeader{
+}
+.protocolModalBody{
+}
+.protocolModalLabel{
+	color:red;
+}
+.protocolFormAction{
+	text-align: center;padding-top: 15px;
+}
+.protocolTable{
+	font-size: 12px;
+}
+.turbineDisplayView {
+	float:left;width:50%;
+}
+.fan-panel-title dl.dl-horizontal dt {
+	width: auto;
+	padding-right: 5px;
+	border-right-width: 1px;
+	border-right-style: solid;
+}
+.modbusCss1 {
+	margin-top: 6px;
+}
+.modbusCss2 {
+	text-align: center;padding-top: 15px;
+}
+.modbusCss3{
+	color:red;float:left;
+}
+.modbusCss4{
+	width:95%;float:left;
+}
+
+
+
+
+
+
+.ztree li a {
+    cursor: pointer;
+    color: black;
+}
+.ztree li span {
+    line-height: 16px;
+    margin-right: 2px;
+    margin-left: 5px;
+}
+.ztree li a.curSelectedNode span:last-child {
+    margin-left: 10px;
+}
+.ztreedivs{
+	display:none;height: 100px;overflow: auto;background: #EEEEEE;
+}
+/* 语音播报弹出Modal选择状态分类使用，请勿删除*/
+.modal-body,.modal-footer{
+	background: white none repeat scroll 0% 0%;
+}
+.dataTables_wrapper{
+	margin-bottom: 15px;
+}
+
+.menu-list .menu-list-lock-icon {
+    color: #FFF;
+}
+.menu-list .menu-list-lock a {
+    cursor: default;
+}
+
+.fan-panel-group-lg .fan-panel-img{
+	height: 90px;
+}
+
+.fan-panel-group-md .fan-panel-img{
+	height: 70px;
+}
+.table-tr{
+	width:25%;
+	word-break: break-all;
+	word-wrap:break-word;
+}
+.group-button{
+	line-height:0;
+	margin:0;
+	width:0px;
+	height:16px;
+	display: inline-block;
+	vertical-align:middle;
+	border:0 none;
+	cursor: pointer;
+	outline:none;
+	background-color:transparent;
+	background-repeat:no-repeat;
+	background-attachment: scroll;
+	background-image:url("../../img/zTreeStandard.png");
+	*background-image:url("../../img/zTreeStandard.gif");
+}
+.group-button.switch{width:14px; height:18px}
+.group-button.root_open{background-position:-92px -54px}
+.group-button.root_close{background-position:-74px -54px}
+.group-button.roots_open{background-position:-92px 0}
+.group-button.roots_close{background-position:-74px 0}
+.group-button.center_open{background-position:-92px -18px}
+.group-button.center_close{background-position:-74px -18px}
+.group-button.bottom_open{background-position:-92px -36px}
+.group-button.bottom_close{background-position:-74px -36px}
+.group-button.noline_open{background-position:-92px -72px}
+.group-button.noline_close{background-position:-74px -72px}
+.group-button.root_docu{ background:none;}
+.group-button.roots_docu{background-position:-64px 0}
+.group-button.center_docu{background-position:-64px -18px}
+.group-button.bottom_docu{background-position:-64px -36px}
+.group-button.noline_docu{ background:none;}
+.group-button.not_show{visibility: hidden}
+
+.cursorPointer{cursor:pointer;}
+.knowledgeAuthTbodyFloor0{color:#990000;}
+.knowledgeAuthTbodyFloor2{color:#009900;}
+.knowledgeAuthTd1{text-align: right;}
+.display_not_show{display:none;}
+.visibility_not_show{visibility:hidden;}
+
+.allChecked{}
+.partChecked{color: red;}
+
+
+/*故障推送配置虚勾样式*/
+.cst-chk {
+	display: none;
+}
+.cst-chk + label {
+	background-color: #FFF;
+	border: 1px solid #C1CACA;
+	margin: 5px 3px 1px;
+	padding: 5px;
+	border-radius: 2px;
+	display: inline-block;
+	position: relative;
+}
+.cst-chk:checked + label {
+	background-color: #ECF2F7;
+	border: 1px solid #92A1AC;
+	color: #243441;
+}
+.cst-chk:checked + label:after {
+	content: '\2714';
+	position: absolute;
+	top: -8px;
+	left: 0px;
+	color: #bbb;
+	width: 100%;
+	text-align: center;
+	font-size: 1em;
+	padding: 0;
+	vertical-align: text-top;
+}
+
+.document_enteringDialog{
+	width:800px;
+	height:800px;
+}
+.emptyWarn{
+	background-color: #FF6;
+}
+/**/
+
+.rightDivFixed{
+	overflow:auto;
+	width:28%;
+	position:fixed;
+	right:10px;
+	height:70%;
+}
+
+
+.smallWord{
+	font-size:10px;
+}
+
+.repository_3d_scroll{
+	height:600px;
+	overflow: auto;
+}

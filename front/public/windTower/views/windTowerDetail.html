@@ -1,0 +1,301 @@
+<!--  添加/修改 模态框 开始-->
+<input type="hidden" id="editModel" value=""/>
+<input type="hidden" id="refreshModel" value=""/>
+<input id="id" type="hidden">
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true"
+     data-backdrop='static' data-keyboard=false autocomplete="off">
+    <div class="modal-dialog broadcastModalDialog" style="height: 645px;width:800px;">
+        <div class="modal-content broadcastModalContent" style="height:100%;width:100%">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">
+                    &times;
+                </button>
+                <h4 id="myModalLabel">
+                    测风塔添加
+                </h4>
+            </div>
+            <div class="modal-body broadcastModalBody clearfix">
+                <div class="col-sm-12">
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            测风塔编号
+                        </label>
+                        <span style="color:red">*</span>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="code" type="text" class="form-control">
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            测风塔名称
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="towerName" type="text" class="form-control">
+                    </div>
+
+                </div>
+                <div class="col-sm-12" style="margin-top: 5px">
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            省市
+                        </label>
+                        <span style="color:red">*</span>
+                    </div>
+                    <div class="col-sm-4">
+                        <select id="selectCountryCity" class="selectpicker form-control"
+                                data-live-search="true"
+                                title="请选择所在省市...">
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            所属项目
+                        </label>
+                        <span style="color:red">*</span>
+                    </div>
+                    <div class="col-sm-4">
+                        <div id="divProject" style="width:77%;display: inline-block">
+                            <select id="selectProject" class="selectpicker form-control"
+                                    data-live-search="true"
+                                    title="请选择所属项目...">
+                            </select>
+                        </div>
+                        <input id="inputProject" type="text" class="form-control"
+                               style="width:77%;display: inline-block">
+                        <label style="font-size:10px">
+                            <input id="newCheckProject" type="checkbox">
+                            新增
+                        </label>
+                    </div>
+                </div>
+                <div class="col-sm-12" style="margin-top: 5px">
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            所属公司
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <div id="divCompany" style="width:77%;display: inline-block">
+                            <select id="selectCompany" class="selectpicker form-control"
+                                    data-live-search="true"
+                                    title="请选择所属公司...">
+                            </select>
+                        </div>
+                        <input id="inputCompany" type="text" class="form-control"
+                               style="width:77%;display: inline-block">
+                        <label style="font-size:10px">
+                            <input id="newCheckCompany" type="checkbox">
+                            新增
+                        </label>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            测风塔厂家
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <div id="divManufactor" style="width:77%;display: inline-block">
+                            <select id="selectManufactor" class="selectpicker form-control"
+                                    data-live-search="true"
+                                    title="请选择所属厂家...">
+                            </select>
+                        </div>
+                        <input id="inputManufactor" type="text" class="form-control"
+                               style="width:77%;display: inline-block">
+                        <label style="font-size:10px">
+                            <input id="newCheckManufactor" type="checkbox">
+                            新增
+                        </label>
+                    </div>
+
+                </div>
+                <div class="col-sm-12" style="margin-top: 5px">
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            项目经理
+                        </label>
+                        <span style="color:red">*</span>
+                    </div>
+                    <div class="col-sm-4">
+                        <select id="selectManager" class="selectpicker form-control"
+                                data-live-search="true"
+                                title="请选择项目经理...">
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            立塔时间
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <div id="towerCreateDateDiv"></div>
+                        <script type="text/javascript">
+                            $('#towerCreateDateDiv').buildCalendar("towerCreateDate", {})
+                        </script>
+                    </div>
+
+                </div>
+                <div class="col-sm-12" style="margin-top: 5px">
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            经度
+                        </label>
+                        <span style="color:red">*</span>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="longitude" type="text" value="" class="form-control">
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            纬度
+                        </label>
+                        <span style="color:red">*</span>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="latitude" type="text" value="" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-12" style="margin-top: 5px">
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            测风塔高度
+                        </label>
+                        <span style="color:red">*</span>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="towerHeight" type="text" value="" class="form-control">
+                        <script>
+                            $("#towerHeight").buildNumber({
+                                min: 1,
+                                max: 9999,
+                            });
+                        </script>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            海拔
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="altitude" type="text" value="" class="form-control">
+                        <script>
+                            $("#altitude").buildNumber();
+                        </script>
+                    </div>
+                </div>
+                <div class="col-sm-12" style="margin-top: 5px">
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            报警延迟日数
+                        </label>
+                        <span style="color:red">*</span>
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="alarmDelayDays" type="text" value="" class="form-control">
+                        <script>
+                            $("#alarmDelayDays").buildNumber({
+                                min: 0,
+                                max: 30,
+                            });
+                        </script>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="text-right" style="width:89%;padding-top: 7px">
+                            数据上传形式
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="checkbox" style="margin-top:0px;padding-top: 0px">
+                            <label style="padding-top: 7px">
+                                <input id="mailCheck" type="checkbox">
+                                邮箱绑定
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12" style="margin-top: 5px">
+                    <div class="col-sm-6">
+                        <div class="col-sm-4">
+                            <label class="text-right" style="width:89%;padding-top: 7px">
+                                备注
+                            </label>
+                        </div>
+                        <div class="col-sm-8">
+                            <textarea id="memo" class="form-control" rows="9"
+                                      style="resize:none;"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div id="mailDiv" class="col-sm-12"
+                             style="border:1px #0d0d0d solid;border-radius: 15px;margin-top: 10px">
+                            <div class="col-sm-4" style="margin-top: 10px">
+                                <label class="text-right" style="width:85%;padding-top: 7px">
+                                    邮箱
+                                </label>
+                                <span style="color:red">*</span>
+                            </div>
+                            <div class="col-sm-8" style="margin-top: 10px">
+                                <input id="mail" type="text" class="form-control">
+                            </div>
+                            <div class="col-sm-4" style="margin-top: 5px">
+                                <label class="text-right" style="width:85%;padding-top: 7px">
+                                    密码
+                                </label>
+                                <span style="color:red">*</span>
+                            </div>
+                            <div class="col-sm-8" style="margin-top: 5px">
+                                <input id="mailPwd" type="password" class="form-control">
+                            </div>
+                            <div class="col-sm-4" style="margin-top: 5px">
+                                <label class="text-right" style="width:89% ;padding-top: 7px">
+                                    数据密码
+                                </label>
+                            </div>
+                            <div class="col-sm-8" style="margin-top: 5px">
+                                <input id="dataPwd" type="password" class="form-control">
+                            </div>
+                            <div class="col-sm-4" style="margin-top: 5px;margin-bottom: 10px">
+                                <label class="text-right" style="width:82% ;padding-top: 7px">
+                                    起始时间
+                                </label>
+                                <span style="color:red">*</span>
+                            </div>
+                            <div class="col-sm-8" style="margin-top: 5px;margin-bottom: 10px">
+                                <div id="mailStartDateDiv"></div>
+                                <script type="text/javascript">
+                                    $('#mailStartDateDiv').buildCalendar("mailStartDate",
+                                        {pickerPosition: "top-left"});
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-1">
+                    <button id="btnDelete" class="btn btn-primary"
+                            onclick="return doDelete();" style="width: 80px;">
+                        删除
+                    </button>
+                </div>
+                <div class="col-sm-11">
+                    <button id="detail-save" type="submit" class="btn btn-primary"
+                            onclick="return saveConfirm();" style="width: 80px;">
+                        保存
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button id="btnCancel" type="button" class="btn btn-default"
+                            data-dismiss="modal" style="width: 80px;">
+                        取消
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+<script src="js/windTowerDetail.js"></script>

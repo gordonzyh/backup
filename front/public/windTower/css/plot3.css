@@ -1,0 +1,173 @@
+.form_plot .table1{
+	width:1100px;
+	height: auto;
+	position: relative;
+	border-top:1px solid #000;
+	border-left:1px solid #000;
+}
+.form_plot .table1 th{
+	color:#c3e7ff;
+	line-height: 32px;
+	background: #0f354c;
+	letter-spacing: 3px;
+	border-right:1px solid #000;
+	border-bottom:1px solid #000;
+}
+.form_plot .table1 td{
+	color:#c3e7ff;
+	line-height: 32px;
+	text-align: center;
+	border-right:1px solid #000;
+	border-bottom:1px solid #000;
+}
+.form_plot .table1 tr td:nth-child(1){
+	width:100px;
+}
+.form_plot .table1 tr td:nth-child(2){
+	width:100px;
+}
+.form_plot .table1 tr td:nth-child(3){
+	width:140px;
+}
+.form_plot .table1 tr td:nth-child(4){
+	width:160px;
+}
+.form_plot .table1 tr td:nth-child(5){
+	width:180px;
+}
+.form_plot .table1 tr td:nth-child(6){
+	width:200px;
+}
+.form_plot .table1 tr td:nth-child(7){
+	width:220px;
+}
+
+
+
+.form_plot .table2{
+	top:46px;
+	left:1px;
+	width:1100px;
+	-height: 800px;
+	position:absolute;
+	border-top:1px solid #2c79a3;
+	border-left:1px solid #2c79a3;
+}
+.form_plot .table2 th{
+	height: 32px;
+	border-right:1px solid #2c79a3;
+	border-bottom:1px solid #2c79a3;
+}
+.form_plot .table2 td{
+	height: 32px;
+	border-right:1px solid #2c79a3;
+	border-bottom:1px solid #2c79a3;
+}
+.form_plot .table2 tr td:nth-child(1){
+	width:100px;
+}
+.form_plot .table2 tr td:nth-child(2){
+	width:100px;
+}
+.form_plot .table2 tr td:nth-child(3){
+	width:140px;
+}
+.form_plot .table2 tr td:nth-child(4){
+	width:160px;
+}
+.form_plot .table2 tr td:nth-child(5){
+	width:180px;
+}
+.form_plot .table2 tr td:nth-child(6){
+	width:200px;
+}
+.form_plot .table2 tr td:nth-child(7){
+	width:220px;
+}
+.form_plot .pagination{
+	position: relative;
+	-display: inline-block;
+	margin:25px 0px 0px 185px;
+}
+.form_plot .pagination code{
+	position: absolute;
+	right:350px;
+	top:7px;
+}
+.form_plot .pagination ul li{
+	width:27px;
+	height: 28px;
+	cursor:pointer;
+	margin-left:5px;
+	display: inline-block;
+	background:url(../img/img1/last1.png) 0 0 no-repeat;
+}
+.form_plot .pagination ul span{
+	width: 5px;
+	height: 5px;
+	margin-left:3px;
+	margin-bottom:10px;
+	display: inline-block;
+	background: url(../img/img1/dian.png) 0 0 no-repeat;
+}
+.form_plot .pagination ul li:nth-child(1){
+	background:url(../img/img1/last2.png) 0 0 no-repeat;
+}
+.form_plot .pagination ul li:nth-child(2){
+	background:url(../img/img1/last1.png) 0 0 no-repeat;
+}
+.form_plot .pagination ul li:nth-child(3){
+	background:url(../img/img1/page1.png) 0 0 no-repeat;
+}
+.form_plot .pagination ul li:nth-child(4){
+	background:url(../img/img1/page2.png) 0 0 no-repeat;
+}
+.form_plot .pagination ul li:nth-child(5){
+	background:url(../img/img1/page3.png) 0 0 no-repeat;
+}
+.form_plot .pagination ul li:nth-child(6){
+	background:url(../img/img1/page4.png) 0 0 no-repeat;
+}
+.form_plot .pagination ul li:nth-child(10){
+	background:url(../img/img1/page5.png) 0 0 no-repeat;
+}
+.form_plot .pagination ul li:nth-child(11){
+	background:url(../img/img1/next1.png) 0 0 no-repeat;
+}
+.form_plot .pagination ul li:nth-child(12){
+	background:url(../img/img1/next2.png) 0 0 no-repeat;
+}
+.form_plot .pagination ul li:nth-child(13){
+	margin-left:200px;
+	background:url(../img/img1/page6.png) 0 0 no-repeat;
+}
+.form_plot .pagination ul li:nth-child(14){
+	background:url(../img/img1/page7.png) 0 0 no-repeat;
+}
+.form_plot .pagination ul li:nth-child(15){
+	background:url(../img/img1/page8.png) 0 0 no-repeat;
+}
+
+.form_plot .pagination #text5{
+	top:0px;
+	right: 142px;
+	width:65px;
+	height: 31px;
+	padding-left:5px;
+	line-height: 31px;
+	border-radius:5px;
+	position: absolute;
+	background: #667f93;
+}
+.form_plot .pagination #btn6{
+	top:0px;
+	right:42px;
+	color:#fff;
+	width:70px;
+	height: 29px;
+	cursor:pointer;
+	line-height: 29px;
+	border-radius:5px;
+	position: absolute;
+	background: url(../img/img1/btn_bg1.gif) 0 0 repeat-x;
+}
